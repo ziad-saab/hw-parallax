@@ -23,4 +23,7 @@ The smooth parallax scrolling effect is achieved by using CSS 3D transforms wher
 * Add any common class you want to all your parallax blocks (e.g. `class="parallax"`)
 * Use `$('.parallax').parallax()` to create the effect
 
-Check the `demo` directory for a complete example using both tiled and regular backgrounds.
+Check the `demo` directory or the [demo page](http://hw-parallax.ziad.cc/) for a complete example using both tiled and regular backgrounds.
+
+### Sites using this plugin
+* [I Can Go Without](http://www.icangowithout.com)
