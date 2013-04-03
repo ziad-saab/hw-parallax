@@ -98,6 +98,14 @@
     redrawBlocks: function() {
       var window_width = $(window).width();
       var window_height = this.window_height = $(window).height();
+
+      // Calculate document height to fix Chrome issue when scrolling past the content...
+      var body = document.body;
+      var html = document.documentElement;
+
+      var document_height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+      this.max_scrolltop = Math.max(0, document_height - window_height);
+
       var num_parallax_blocks = this.parallax_blocks.length;
       for (var i = 0; i < num_parallax_blocks; i++) {
         var parallax_block_data = this.parallax_blocks[i];
@@ -149,7 +157,7 @@
       }
     },
     draw: function() {
-      var scroll_top = $(window).scrollTop();
+      var scroll_top = Math.min(Math.max(0, $(window).scrollTop()), this.max_scrolltop);
 
       // Loop thru all the parallax blocks
       var num_blocks = this.parallax_blocks.length;
