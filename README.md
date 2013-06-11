@@ -28,3 +28,4 @@ Check the `demo` directory or the [demo page](http://hw-parallax.ziad.cc/) for a
 ### Sites using this plugin
 * [I Can Go Without](http://www.icangowithout.com)
 * [Brendan Sera-Shriar a.k.a. digibomb](http://brendanserashriar.com/)
+* [Pinot Gris, 2012 Monterey by La Crema](http://pg.lacrema.com/)
