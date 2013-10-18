@@ -93,6 +93,7 @@
       var $window = $(window);
       $window.on('load', reconfigure);
       $window.on('resize', reconfigure);
+      $window.on('hwparallax.reconfigure', reconfigure);
       $window.on('scroll', function() {manager.render();});
     },
     redrawBlocks: function() {
