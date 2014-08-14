@@ -59,14 +59,15 @@
     init: function() {
       this.scroll_factor = this.options.scroll_factor;
       var parallax_blocks = this.parallax_blocks = [];
+      var image_attr = this.options.image_attr
 
       var $body = $('body');
       var $origins = this.options.origins;
       $origins.each(function() {
         var $origin = $(this);
         var $parallax_block;
-        if ($origin.data('image')) {
-          $parallax_block = $('<div class="parallax-block"><img class="parallax-image" src="' + $origin.data('image') + '"></div>');
+        if ($origin.data(image_attr)) {
+          $parallax_block = $('<div class="parallax-block"><img class="parallax-image" src="' + $origin.data(image_attr) + '"></div>');
           parallax_blocks.push({
             origin: $origin,
             block: $parallax_block,
@@ -220,7 +221,8 @@
     parallax: function(options) {
       var settings = $.extend(
           {
-            scroll_factor: 0.2
+            scroll_factor: 0.2,
+            image_attr: 'image'
           },
           options,
           {
