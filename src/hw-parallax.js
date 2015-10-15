@@ -133,7 +133,7 @@
         $parallax_image.width(img_width).height(img_height);
 
         // Set the dimensions of the parallax block and hide it
-        $parallax_block.width(window_width).height(origin_height).css('visibility', 'hidden');
+        $parallax_block.width(window_width).height(origin_height);
 
         // Cache some data about the parallax block so that we don't have to recalculate it on every tick
         // This data potentially changes, only changes when the window is resized
